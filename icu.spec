@@ -2,12 +2,12 @@
 
 Summary:	International Components for Unicode
 Name:		icu
-Version:	49.1.2
+Version:	52.1
 Release:	1
 License:	X License
 Group:		Libraries
-Source0:	http://download.icu-project.org/files/icu4c/%{version}/%{name}4c-%{vaer}-src.tgz
-# Source0-md5:	bbc609fe5237202d7abf016141012a45
+Source0:	http://download.icu-project.org/files/icu4c/%{version}/%{name}4c-%{verX}-src.tgz
+# Source0-md5:	9e96ed4c1d99c0d14ac03c140f9f346c
 Patch0:		%{name}-aclocal-hack.patch
 URL:		http://www.ibm.com/software/globalization/icu/
 BuildRequires:	automake
@@ -54,7 +54,6 @@ files for ICU.
 
 %build
 cd source
-mv aclocal.m4 acinclude.m4
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
